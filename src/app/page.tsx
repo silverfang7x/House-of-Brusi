@@ -1,15 +1,23 @@
+import React from 'react';
+import { Hero } from '@/components/sections/Hero';
+import { Manifesto } from '@/components/sections/Manifesto';
+import { FeaturedCollections } from '@/components/sections/FeaturedCollections';
+import { ShopTheGram } from '@/components/sections/ShopTheGram';
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center">
-      <h1 className="font-display text-4xl font-semibold tracking-tight text-ink">
-        House of Brusi
-      </h1>
-      <p className="mt-4 font-body text-lg text-saddle">
-        Scaffold initialized with strict TypeScript and custom design token system.
-      </p>
-      <span className="mt-2 font-mono text-sm text-dust">
-        SKU: HOB-SCAFFOLD-001
-      </span>
+    <main className="w-full bg-bone">
+      {/* 1. Opening Hero Section */}
+      <Hero />
+
+      {/* 2. Brand Manifesto */}
+      <Manifesto />
+
+      {/* 3. Featured Collections Grid */}
+      <FeaturedCollections />
+
+      {/* 4. Instagram Editorial Grid */}
+      <ShopTheGram />
     </main>
   );
 }
