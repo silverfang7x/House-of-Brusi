@@ -1,0 +1,554 @@
+[
+  {
+    "slug": "sahara-linen-overshirt",
+    "name": "Sahara Linen Overshirt",
+    "collectionSlug": "desert-bloom",
+    "description": "Relaxed silhouette crafted from heavy Belgian linen with brass hardware.",
+    "careInstructions": "Dry clean or gentle hand wash cold.",
+    "fabric": "100% Belgian Linen",
+    "basePriceRupees": 14999,
+    "compareAtPriceRupees": 17999,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+        "altText": "Sahara Linen Overshirt Front View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "XS",
+        "colorName": "Sandstorm",
+        "colorHex": "#D4A373",
+        "sku": "HOB-SAH-SND-XS",
+        "inventoryCount": 10
+      },
+      {
+        "size": "S",
+        "colorName": "Sandstorm",
+        "colorHex": "#D4A373",
+        "sku": "HOB-SAH-SND-S",
+        "inventoryCount": 15
+      },
+      {
+        "size": "M",
+        "colorName": "Sandstorm",
+        "colorHex": "#D4A373",
+        "sku": "HOB-SAH-SND-M",
+        "inventoryCount": 20
+      },
+      {
+        "size": "L",
+        "colorName": "Sandstorm",
+        "colorHex": "#D4A373",
+        "sku": "HOB-SAH-SND-L",
+        "inventoryCount": 12
+      },
+      {
+        "size": "XL",
+        "colorName": "Sandstorm",
+        "colorHex": "#D4A373",
+        "sku": "HOB-SAH-SND-XL",
+        "inventoryCount": 8
+      },
+      {
+        "size": "S",
+        "colorName": "Saddle Brown",
+        "colorHex": "#6B4A31",
+        "sku": "HOB-SAH-SDL-S",
+        "inventoryCount": 10
+      },
+      {
+        "size": "M",
+        "colorName": "Saddle Brown",
+        "colorHex": "#6B4A31",
+        "sku": "HOB-SAH-SDL-M",
+        "inventoryCount": 18
+      },
+      {
+        "size": "L",
+        "colorName": "Saddle Brown",
+        "colorHex": "#6B4A31",
+        "sku": "HOB-SAH-SDL-L",
+        "inventoryCount": 14
+      }
+    ]
+  },
+  {
+    "slug": "terracotta-pleated-trousers",
+    "name": "Terracotta Pleated Trousers",
+    "collectionSlug": "desert-bloom",
+    "description": "High-waisted tailored trousers featuring deep double front pleats.",
+    "careInstructions": "Dry clean only.",
+    "fabric": "Wool Cotton Blend",
+    "basePriceRupees": 18999,
+    "compareAtPriceRupees": null,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+        "altText": "Terracotta Pleated Trousers Front View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Terracotta",
+        "colorHex": "#C86D51",
+        "sku": "HOB-TRC-TRS-S",
+        "inventoryCount": 12
+      },
+      {
+        "size": "M",
+        "colorName": "Terracotta",
+        "colorHex": "#C86D51",
+        "sku": "HOB-TRC-TRS-M",
+        "inventoryCount": 16
+      },
+      {
+        "size": "L",
+        "colorName": "Terracotta",
+        "colorHex": "#C86D51",
+        "sku": "HOB-TRC-TRS-L",
+        "inventoryCount": 10
+      }
+    ]
+  },
+  {
+    "slug": "dune-draped-kimono-cardigan",
+    "name": "Dune Draped Kimono Cardigan",
+    "collectionSlug": "desert-bloom",
+    "description": "Open-front knit cardigan woven from breathable raw silk and hemp yarns.",
+    "careInstructions": "Hand wash cold flat dry.",
+    "fabric": "Raw Silk & Hemp Yarns",
+    "basePriceRupees": 22999,
+    "compareAtPriceRupees": 25999,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+        "altText": "Dune Draped Kimono Cardigan View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Dune Sand",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-DUN-KMN-S",
+        "inventoryCount": 8
+      },
+      {
+        "size": "M",
+        "colorName": "Dune Sand",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-DUN-KMN-M",
+        "inventoryCount": 14
+      },
+      {
+        "size": "L",
+        "colorName": "Dune Sand",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-DUN-KMN-L",
+        "inventoryCount": 9
+      }
+    ]
+  },
+  {
+    "slug": "oasis-band-collar-shirt",
+    "name": "Oasis Band Collar Shirt",
+    "collectionSlug": "desert-bloom",
+    "description": "Clean mandarin collar shirt with hand-stitched detailing along the placket.",
+    "careInstructions": "Machine wash gentle inside out.",
+    "fabric": "100% Organic Cotton",
+    "basePriceRupees": 12999,
+    "compareAtPriceRupees": null,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+        "altText": "Oasis Band Collar Shirt View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Bone White",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-OAS-SHR-S",
+        "inventoryCount": 15
+      },
+      {
+        "size": "M",
+        "colorName": "Bone White",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-OAS-SHR-M",
+        "inventoryCount": 20
+      },
+      {
+        "size": "L",
+        "colorName": "Bone White",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-OAS-SHR-L",
+        "inventoryCount": 12
+      }
+    ]
+  },
+  {
+    "slug": "midnight-selvedge-denim-jacket",
+    "name": "Midnight Selvedge Denim Jacket",
+    "collectionSlug": "midnight-rodeo",
+    "description": "14oz Japanese raw indigo selvedge denim jacket with contrast top-stitching.",
+    "careInstructions": "Do not wash for first 6 months. Spot clean.",
+    "fabric": "14oz Japanese Selvedge Cotton",
+    "basePriceRupees": 24999,
+    "compareAtPriceRupees": 28999,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80",
+        "altText": "Midnight Selvedge Denim Jacket View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Raw Indigo",
+        "colorHex": "#17140F",
+        "sku": "HOB-JAC-IND-S",
+        "inventoryCount": 8
+      },
+      {
+        "size": "M",
+        "colorName": "Raw Indigo",
+        "colorHex": "#17140F",
+        "sku": "HOB-JAC-IND-M",
+        "inventoryCount": 25
+      },
+      {
+        "size": "L",
+        "colorName": "Raw Indigo",
+        "colorHex": "#17140F",
+        "sku": "HOB-JAC-IND-L",
+        "inventoryCount": 15
+      },
+      {
+        "size": "XL",
+        "colorName": "Raw Indigo",
+        "colorHex": "#17140F",
+        "sku": "HOB-JAC-IND-XL",
+        "inventoryCount": 5
+      },
+      {
+        "size": "M",
+        "colorName": "Worn Black",
+        "colorHex": "#222222",
+        "sku": "HOB-JAC-BLK-M",
+        "inventoryCount": 12
+      },
+      {
+        "size": "L",
+        "colorName": "Worn Black",
+        "colorHex": "#222222",
+        "sku": "HOB-JAC-BLK-L",
+        "inventoryCount": 10
+      }
+    ]
+  },
+  {
+    "slug": "rodeo-suede-fringe-vest",
+    "name": "Rodeo Suede Fringe Vest",
+    "collectionSlug": "midnight-rodeo",
+    "description": "Artisanal goat suede vest with subtle top-stitched trim and western yoke.",
+    "careInstructions": "Specialist leather clean only.",
+    "fabric": "100% Italian Goat Suede",
+    "basePriceRupees": 34999,
+    "compareAtPriceRupees": null,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80",
+        "altText": "Rodeo Suede Fringe Vest View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Merlot",
+        "colorHex": "#5B1F26",
+        "sku": "HOB-ROD-VST-S",
+        "inventoryCount": 5
+      },
+      {
+        "size": "M",
+        "colorName": "Merlot",
+        "colorHex": "#5B1F26",
+        "sku": "HOB-ROD-VST-M",
+        "inventoryCount": 10
+      },
+      {
+        "size": "L",
+        "colorName": "Merlot",
+        "colorHex": "#5B1F26",
+        "sku": "HOB-ROD-VST-L",
+        "inventoryCount": 7
+      }
+    ]
+  },
+  {
+    "slug": "indigo-western-pearl-snap-shirt",
+    "name": "Indigo Western Pearl-Snap Shirt",
+    "collectionSlug": "midnight-rodeo",
+    "description": "Garment-dyed indigo chambray shirt fitted with genuine mother-of-pearl snaps.",
+    "careInstructions": "Machine wash cold with like colors.",
+    "fabric": "100% Indigo Cotton Chambray",
+    "basePriceRupees": 15999,
+    "compareAtPriceRupees": 18999,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+        "altText": "Indigo Western Pearl-Snap Shirt View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Indigo Chambray",
+        "colorHex": "#2B4C7E",
+        "sku": "HOB-WST-SHR-S",
+        "inventoryCount": 14
+      },
+      {
+        "size": "M",
+        "colorName": "Indigo Chambray",
+        "colorHex": "#2B4C7E",
+        "sku": "HOB-WST-SHR-M",
+        "inventoryCount": 18
+      },
+      {
+        "size": "L",
+        "colorName": "Indigo Chambray",
+        "colorHex": "#2B4C7E",
+        "sku": "HOB-WST-SHR-L",
+        "inventoryCount": 11
+      }
+    ]
+  },
+  {
+    "slug": "outlaw-tapered-riding-pants",
+    "name": "Outlaw Tapered Riding Pants",
+    "collectionSlug": "midnight-rodeo",
+    "description": "Heavyweight twill pants reinforced with saddle stitching at tension points.",
+    "careInstructions": "Machine wash cold cycle.",
+    "fabric": "100% Cotton Canvas Twill",
+    "basePriceRupees": 19999,
+    "compareAtPriceRupees": null,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80",
+        "altText": "Outlaw Tapered Riding Pants View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Saddle Brown",
+        "colorHex": "#6B4A31",
+        "sku": "HOB-OUT-PNT-S",
+        "inventoryCount": 10
+      },
+      {
+        "size": "M",
+        "colorName": "Saddle Brown",
+        "colorHex": "#6B4A31",
+        "sku": "HOB-OUT-PNT-M",
+        "inventoryCount": 15
+      },
+      {
+        "size": "L",
+        "colorName": "Saddle Brown",
+        "colorHex": "#6B4A31",
+        "sku": "HOB-OUT-PNT-L",
+        "inventoryCount": 8
+      }
+    ]
+  },
+  {
+    "slug": "prairie-chore-coat",
+    "name": "Prairie Chore Coat",
+    "collectionSlug": "prairie-modern",
+    "description": "Structured four-pocket chore coat featuring antiqued brass rivet details.",
+    "careInstructions": "Machine wash cold line dry.",
+    "fabric": "Heavy Duck Canvas",
+    "basePriceRupees": 21999,
+    "compareAtPriceRupees": null,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80",
+        "altText": "Prairie Chore Coat View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "XS",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-CHR-ECR-XS",
+        "inventoryCount": 6
+      },
+      {
+        "size": "S",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-CHR-ECR-S",
+        "inventoryCount": 14
+      },
+      {
+        "size": "M",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-CHR-ECR-M",
+        "inventoryCount": 22
+      },
+      {
+        "size": "L",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-CHR-ECR-L",
+        "inventoryCount": 16
+      },
+      {
+        "size": "XL",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-CHR-ECR-XL",
+        "inventoryCount": 9
+      },
+      {
+        "size": "M",
+        "colorName": "Dust Brown",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-CHR-DST-M",
+        "inventoryCount": 11
+      },
+      {
+        "size": "L",
+        "colorName": "Dust Brown",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-CHR-DST-L",
+        "inventoryCount": 13
+      }
+    ]
+  },
+  {
+    "slug": "artisan-utility-smock",
+    "name": "Artisan Utility Smock",
+    "collectionSlug": "prairie-modern",
+    "description": "Over-the-head utility tunic shirt with dropped shoulders and side slits.",
+    "careInstructions": "Machine wash warm.",
+    "fabric": "100% Organic Linen-Cotton",
+    "basePriceRupees": 16999,
+    "compareAtPriceRupees": 19999,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=80",
+        "altText": "Artisan Utility Smock View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Dust Linen",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-SMK-DST-S",
+        "inventoryCount": 10
+      },
+      {
+        "size": "M",
+        "colorName": "Dust Linen",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-SMK-DST-M",
+        "inventoryCount": 16
+      },
+      {
+        "size": "L",
+        "colorName": "Dust Linen",
+        "colorHex": "#C7BBA3",
+        "sku": "HOB-SMK-DST-L",
+        "inventoryCount": 12
+      }
+    ]
+  },
+  {
+    "slug": "harvest-wide-leg-trousers",
+    "name": "Harvest Wide-Leg Trousers",
+    "collectionSlug": "prairie-modern",
+    "description": "Relaxed wide-leg trousers cut from unbleached natural cotton drill.",
+    "careInstructions": "Machine wash cold.",
+    "fabric": "Natural Cotton Drill",
+    "basePriceRupees": 17999,
+    "compareAtPriceRupees": null,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=800&q=80",
+        "altText": "Harvest Wide-Leg Trousers View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-HRV-TRS-S",
+        "inventoryCount": 9
+      },
+      {
+        "size": "M",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-HRV-TRS-M",
+        "inventoryCount": 17
+      },
+      {
+        "size": "L",
+        "colorName": "Natural Ecru",
+        "colorHex": "#F1EAD8",
+        "sku": "HOB-HRV-TRS-L",
+        "inventoryCount": 11
+      }
+    ]
+  },
+  {
+    "slug": "fieldmaster-work-waistcoat",
+    "name": "Fieldmaster Work Waistcoat",
+    "collectionSlug": "prairie-modern",
+    "description": "Layering vest with notched lapel and rear brass cinch adjuster.",
+    "careInstructions": "Dry clean.",
+    "fabric": "Brushed Wool Twill",
+    "basePriceRupees": 20999,
+    "compareAtPriceRupees": 23999,
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+        "altText": "Fieldmaster Work Waistcoat View"
+      }
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "colorName": "Brass Tweed",
+        "colorHex": "#B08D57",
+        "sku": "HOB-WST-BRS-S",
+        "inventoryCount": 7
+      },
+      {
+        "size": "M",
+        "colorName": "Brass Tweed",
+        "colorHex": "#B08D57",
+        "sku": "HOB-WST-BRS-M",
+        "inventoryCount": 12
+      },
+      {
+        "size": "L",
+        "colorName": "Brass Tweed",
+        "colorHex": "#B08D57",
+        "sku": "HOB-WST-BRS-L",
+        "inventoryCount": 8
+      }
+    ]
+  }
+]
