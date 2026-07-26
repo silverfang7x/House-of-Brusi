@@ -3,6 +3,7 @@ import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
 import { SiteHeader } from '@/components/sections/SiteHeader';
 import { SiteFooter } from '@/components/sections/SiteFooter';
+import { CartDrawer } from '@/components/commerce/CartDrawer';
 import '../styles/globals.css';
 
 const fraunces = Fraunces({
@@ -47,6 +48,7 @@ export default function RootLayout({
           <SiteHeader />
           <div className="flex-1 pt-20">{children}</div>
           <SiteFooter />
+          <CartDrawer />
         </SmoothScrollProvider>
       </body>
     </html>

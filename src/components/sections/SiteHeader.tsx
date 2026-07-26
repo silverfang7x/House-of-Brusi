@@ -1,20 +1,28 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Search, ShoppingBag, User } from 'lucide-react';
-import { useCartStore } from '@/store/cart';
+import { useCartStore, selectItemCount } from '@/store/cart';
 import { MegaMenu } from './MegaMenu';
 import { SearchModal } from '../commerce/SearchModal';
 
 export function SiteHeader() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const collectionsTriggerRef = useRef<HTMLButtonElement>(null);
 
-  const cartStore = useCartStore();
-  const itemCount = cartStore.getItemCount();
+  const toggleCart = useCartStore((state) => state.toggleCart);
+  const hasHydrated = useCartStore((state) => state.hasHydrated);
+  const itemCount = useCartStore(selectItemCount);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const displayCount = isMounted && hasHydrated ? itemCount : 0;
 
   const { scrollY } = useScroll();
 
@@ -104,20 +112,24 @@ export function SiteHeader() {
             </Link>
 
             <button
-              onClick={cartStore.toggleCart}
-              aria-label={`View shopping cart with ${itemCount} items`}
+              onClick={toggleCart}
+              aria-label={`View shopping cart with ${displayCount} items`}
               className="relative text-bone hover:text-brass transition-colors p-1 focus:outline-none focus:ring-2 focus:ring-brass rounded-sm"
             >
               <ShoppingBag className="h-5 w-5" />
-              {itemCount > 0 && (
-                <motion.span
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  key={itemCount}
-                  className="absolute -top-1.5 -right-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-saddle px-1 font-mono text-[10px] font-medium text-bone shadow-sm"
-                >
-                  {itemCount}
-                </motion.span>
+              {displayCount > 0 && (
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={displayCount}
+                    initial={{ y: -8, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 8, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute -top-1.5 -right-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-saddle px-1 font-mono text-[10px] font-bold text-bone shadow-sm"
+                  >
+                    {displayCount}
+                  </motion.span>
+                </AnimatePresence>
               )}
             </button>
           </div>

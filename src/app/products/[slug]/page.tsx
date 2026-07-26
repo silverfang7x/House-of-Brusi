@@ -128,6 +128,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     altText: img.alt_text,
   }));
   const variants = product.product_variants || [];
+  const primaryImageUrl = images[0]?.url || 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1200&q=90';
 
   return (
     <div className="min-h-screen bg-bone text-ink pb-24">
@@ -176,7 +177,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <VariantSelector
               variants={variants}
               basePriceRupees={basePriceRupees}
+              productId={product.id}
               productName={product.name}
+              productImage={primaryImageUrl}
             />
 
             {/* Value Guarantees */}

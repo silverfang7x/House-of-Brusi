@@ -19,12 +19,20 @@ export interface VariantData {
 interface VariantSelectorProps {
   variants: VariantData[];
   basePriceRupees: number;
+  productId?: string;
   productName?: string;
+  productImage?: string;
 }
 
 const ALL_SIZES = ['XS', 'S', 'M', 'L', 'XL'];
 
-export function VariantSelector({ variants, basePriceRupees }: VariantSelectorProps) {
+export function VariantSelector({
+  variants,
+  basePriceRupees,
+  productId = 'prod-default',
+  productName = 'House of Brusi Garment',
+  productImage = 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80',
+}: VariantSelectorProps) {
   // Extract unique colors
   const uniqueColorsMap = new Map<string, string>();
   variants.forEach((v) => {
@@ -63,9 +71,16 @@ export function VariantSelector({ variants, basePriceRupees }: VariantSelectorPr
     if (!selectedVariant || !isSelectedVariantInStock) return;
 
     cartStore.addItem({
-      id: `cart-${selectedVariant.sku}`,
+      id: selectedVariant.sku,
       variantId: selectedVariant.sku,
+      productId: productId,
+      name: productName,
+      size: selectedVariant.size,
+      colorName: selectedVariant.color_name,
+      unitPricePaise: currentPriceRupees * 100,
       quantity: 1,
+      imageUrl: productImage,
+      maxInventory: selectedVariant.inventory_count,
     });
 
     cartStore.openCart();

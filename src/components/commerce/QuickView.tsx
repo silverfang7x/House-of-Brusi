@@ -94,7 +94,9 @@ export function QuickView({ isOpen, onClose, product, triggerRef }: QuickViewPro
             <VariantSelector
               variants={variants}
               basePriceRupees={basePriceRupees}
+              productId={product.id}
               productName={product.name}
+              productImage={primaryImageUrl}
             />
           </div>
 
