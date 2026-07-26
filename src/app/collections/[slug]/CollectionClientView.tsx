@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -22,7 +22,11 @@ interface CollectionClientViewProps {
   products: ProductWithDetails[];
 }
 
-export function CollectionClientView({ collection, products }: CollectionClientViewProps) {
+function CollectionProductGrid({
+  products,
+}: {
+  products: ProductWithDetails[];
+}) {
   const searchParams = useSearchParams();
   const [quickViewProduct, setQuickViewProduct] = useState<ProductWithDetails | null>(null);
 
@@ -50,6 +54,90 @@ export function CollectionClientView({ collection, products }: CollectionClientV
     return true;
   });
 
+  return (
+    <>
+      {/* Filter Bar */}
+      <ProductFilters />
+
+      {/* Results Counter */}
+      <div className="mb-6 flex items-center justify-between font-mono text-xs text-dust">
+        <span>Showing {filteredProducts.length} of {products.length} Garments</span>
+      </div>
+
+      {/* Product Grid */}
+      {filteredProducts.length === 0 ? (
+        <div className="py-20 text-center border border-dashed border-dust/40 rounded-sm">
+          <p className="font-display text-lg text-ink">No garments match selected filters.</p>
+          <p className="mt-2 font-mono text-xs text-dust">Try adjusting size or price range selection.</p>
+        </div>
+      ) : (
+        <StaggerGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProducts.map((product) => {
+            const priceRupees = Math.round(product.base_price_paise / 100);
+            const primaryImage =
+              product.product_images[0]?.url ||
+              'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80';
+
+            return (
+              <StaggerItem key={product.id}>
+                <div className="group relative">
+                  <TiltCard className="bg-ink text-bone border border-dust/20 shadow-lg">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
+                      <Image
+                        src={primaryImage}
+                        alt={product.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+
+                      {/* Quick View Button Hover Affordance */}
+                      <button
+                        onClick={() => setQuickViewProduct(product)}
+                        className="absolute top-4 right-4 z-20 flex items-center gap-1.5 bg-ink/90 text-bone px-3 py-1.5 rounded-sm font-mono text-xs border border-brass/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:bg-brass hover:text-ink shadow-md"
+                        aria-label={`Quick view ${product.name}`}
+                      >
+                        <Eye className="h-3.5 w-3.5" />
+                        <span>Quick View</span>
+                      </button>
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80" />
+
+                      {/* Product Info Overlay */}
+                      <div className="absolute bottom-4 left-4 right-4 z-10">
+                        <Link href={`/products/${product.slug}`} className="block">
+                          <h3 className="font-display text-xl font-medium text-bone group-hover:text-brass transition-colors">
+                            {product.name}
+                          </h3>
+                          {product.fabric && (
+                            <p className="font-mono text-[11px] text-dust mt-0.5">{product.fabric}</p>
+                          )}
+                          <div className="mt-2 flex items-baseline justify-between font-mono text-sm text-bone">
+                            <span>₹{priceRupees.toLocaleString('en-IN')}</span>
+                            <span className="text-xs text-brass group-hover:underline">View Piece &rarr;</span>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </TiltCard>
+                </div>
+              </StaggerItem>
+            );
+          })}
+        </StaggerGroup>
+      )}
+
+      {/* Quick View Modal */}
+      <QuickView
+        isOpen={quickViewProduct != null}
+        onClose={() => setQuickViewProduct(null)}
+        product={quickViewProduct}
+      />
+    </>
+  );
+}
+
+export function CollectionClientView({ collection, products }: CollectionClientViewProps) {
   return (
     <div className="min-h-screen bg-bone text-ink pb-24">
       {/* Collection Hero Header */}
@@ -82,84 +170,10 @@ export function CollectionClientView({ collection, products }: CollectionClientV
 
       {/* Main Container */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-12">
-        {/* Filter Bar */}
-        <ProductFilters />
-
-        {/* Results Counter */}
-        <div className="mb-6 flex items-center justify-between font-mono text-xs text-dust">
-          <span>Showing {filteredProducts.length} of {products.length} Garments</span>
-        </div>
-
-        {/* Product Grid */}
-        {filteredProducts.length === 0 ? (
-          <div className="py-20 text-center border border-dashed border-dust/40 rounded-sm">
-            <p className="font-display text-lg text-ink">No garments match selected filters.</p>
-            <p className="mt-2 font-mono text-xs text-dust">Try adjusting size or price range selection.</p>
-          </div>
-        ) : (
-          <StaggerGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => {
-              const priceRupees = Math.round(product.base_price_paise / 100);
-              const primaryImage =
-                product.product_images[0]?.url ||
-                'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80';
-
-              return (
-                <StaggerItem key={product.id}>
-                  <div className="group relative">
-                    <TiltCard className="bg-ink text-bone border border-dust/20 shadow-lg">
-                      <div className="relative aspect-[3/4] w-full overflow-hidden">
-                        <Image
-                          src={primaryImage}
-                          alt={product.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-
-                        {/* Quick View Button Hover Affordance */}
-                        <button
-                          onClick={() => setQuickViewProduct(product)}
-                          className="absolute top-4 right-4 z-20 flex items-center gap-1.5 bg-ink/90 text-bone px-3 py-1.5 rounded-sm font-mono text-xs border border-brass/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:bg-brass hover:text-ink shadow-md"
-                          aria-label={`Quick view ${product.name}`}
-                        >
-                          <Eye className="h-3.5 w-3.5" />
-                          <span>Quick View</span>
-                        </button>
-
-                        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80" />
-
-                        {/* Product Info Overlay */}
-                        <div className="absolute bottom-4 left-4 right-4 z-10">
-                          <Link href={`/products/${product.slug}`} className="block">
-                            <h3 className="font-display text-xl font-medium text-bone group-hover:text-brass transition-colors">
-                              {product.name}
-                            </h3>
-                            {product.fabric && (
-                              <p className="font-mono text-[11px] text-dust mt-0.5">{product.fabric}</p>
-                            )}
-                            <div className="mt-2 flex items-baseline justify-between font-mono text-sm text-bone">
-                              <span>₹{priceRupees.toLocaleString('en-IN')}</span>
-                              <span className="text-xs text-brass group-hover:underline">View Piece &rarr;</span>
-                            </div>
-                          </Link>
-                        </div>
-                      </div>
-                    </TiltCard>
-                  </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerGroup>
-        )}
+        <Suspense fallback={<div className="py-12 text-center font-mono text-xs text-dust">Loading collection...</div>}>
+          <CollectionProductGrid products={products} />
+        </Suspense>
       </div>
-
-      {/* Quick View Modal */}
-      <QuickView
-        isOpen={quickViewProduct != null}
-        onClose={() => setQuickViewProduct(null)}
-        product={quickViewProduct}
-      />
     </div>
   );
 }
