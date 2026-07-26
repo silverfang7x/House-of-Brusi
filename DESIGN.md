@@ -47,3 +47,23 @@ All layouts and component dimensions must adhere to the 8px-based spatial system
 - **Specification**: A horizontal dashed line, 1.5px stroke width, using the `--color-brass` (`#B08D57`) color.
 - **Organic Character**: Features a subtle hand-drawn irregularity with slight y-offset per dash (implemented via custom SVG or CSS clip-path mask) to evoke bespoke tailoring and denim top-stitching.
 - **Strict Constraint**: Reserved strictly for hero sections and major section dividers. Never used as generic borders, card outlines, or ambient decoration.
+
+---
+
+## Instagram Integration & Vercel Cron Scheduling
+
+- **Sync Route**: `POST /api/sync/instagram`
+- **Security**: Protected via `x-sync-secret` header check against `process.env.SYNC_SECRET`.
+- **Apify Integration**: Automatically queries `https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items` with `APIFY_API_TOKEN` for `@house_of_brusi` posts.
+- **Upsert Resilience**: Performs `onConflict: 'instagram_post_id'` database upsert via Supabase service-role client. On network or token failure, returns `500` without deleting existing rows.
+- **Vercel Cron Setup**: Configured in `vercel.json` to execute daily:
+  ```json
+  {
+    "crons": [
+      {
+        "path": "/api/sync/instagram",
+        "schedule": "0 0 * * *"
+      }
+    ]
+  }
+  ```
